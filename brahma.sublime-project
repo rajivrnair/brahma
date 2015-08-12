@@ -1,0 +1,15 @@
+{
+  "folders":
+  [
+    {
+      "name": "Brahma",
+      "path": ".",
+      "folder_exclude_patterns": [ "__" ]
+    }
+  ],
+  "settings":
+  {
+    "tab_size": 2,
+    "translate_tabs_to_spaces": true
+  }
+}
