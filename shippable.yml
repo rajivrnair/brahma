@@ -1,0 +1,10 @@
+language: ruby
+rvm: 2.1.5
+
+bundler_args: --binstubs
+
+before_script:
+  - rm -rf shippable/*
+
+script:
+  bundle exec rake --trace
