@@ -7,4 +7,4 @@ before_script:
   - rm -rf shippable/*
 
 script:
-  bundle exec rake --trace
+  bundle exec rspec
