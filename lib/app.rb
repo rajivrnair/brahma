@@ -8,6 +8,8 @@ configure {
 }
 
 class Brahma < Sinatra::Base
+  env['TZ'] = 'Asia/Kolkata'
+
   configure do
     enable :logging
     access_log = File.new("#{settings.root}/../log/access-#{settings.environment}.log", 'a+')

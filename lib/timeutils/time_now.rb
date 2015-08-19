@@ -9,7 +9,7 @@ module Timeutils
     }
 
     def self.in(zone='')
-      return Time.now.to_s if zone.empty?
+      return "#{Time.now.to_s} (Bangalore)" if zone.empty?
 
       zone = zone.split('/').map { |x| x.downcase.split.map(&:capitalize)*' ' }.join('/')
       time_zone = (@@my_places[zone].nil?)? ActiveSupport::TimeZone[zone] : ActiveSupport::TimeZone[@@my_places[zone]]
