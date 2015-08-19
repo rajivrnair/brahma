@@ -8,7 +8,7 @@ configure {
 }
 
 class Brahma < Sinatra::Base
-  env['TZ'] = 'Asia/Kolkata'
+  ENV['TZ'] = 'Asia/Kolkata'
 
   configure do
     enable :logging
@@ -20,7 +20,7 @@ class Brahma < Sinatra::Base
   error_log = ::File.new("#{settings.root}/../log/error-#{settings.environment}.log","a+")
   error_log.sync = true
   before {
-    env["rack.errors"] = error_log
+    env['rack.errors'] = error_log
   }
 
   get '/ping' do
