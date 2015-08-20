@@ -15,7 +15,7 @@ module Timeutils
       time_zone = (@@my_places[zone].nil?)? ActiveSupport::TimeZone[zone] : ActiveSupport::TimeZone[@@my_places[zone]]
       time_zone = ActiveSupport::TimeZone::MAPPING[zone] if time_zone.nil?
 
-      (time_zone.nil?)? default_zones : time_zone.at(Time.now).to_s
+      (time_zone.nil?)? default_zones : "#{time_zone.at(Time.now).to_s} (#{zone})"
     end
 
     private
