@@ -3,9 +3,6 @@ rvm: 2.2.2
 
 bundler_args: --binstubs
 
-before_install:
-  - gem install capistrano
-
 before_script:
   - rm -rf shippable/*
 
@@ -13,4 +10,4 @@ script:
   bundle exec rspec
 
 after_success:
-  - cap -v production deploy:execute_on_server
+  - bundle exec cap production deploy:execute_on_server --trace
