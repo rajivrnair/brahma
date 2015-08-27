@@ -8,3 +8,7 @@ before_script:
 
 script:
   bundle exec rspec
+
+after_success:
+  - ssh deployer@128.199.216.161 && git clone https://github.com/rajivrnair/brahma.git
+  - whoami
