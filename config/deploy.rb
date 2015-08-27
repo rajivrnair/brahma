@@ -48,8 +48,9 @@ set :rbenv_roles, :all # default value
 namespace :deploy do
 
   task :execute_on_server do
-    on "deployer@128.199.216.161" do
-      execute "cd brahma && git pull && ./run_me.sh"
+    # puts "Command map: #{SSHKit.config.command_map}"
+    on 'deployer@128.199.216.161' do
+      execute 'cd brahma && git pull && ./run_me.sh'
     end
   end
 
