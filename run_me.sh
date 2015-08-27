@@ -1,7 +1,7 @@
 #!/bin/bash
 ps ax | grep puma | grep 'tcp' | awk '{print $1}' | xargs -I % sh -c '{ kill -9 %; }'
 
-cd ~/brahma
+export PATH="~/.rbenv/plugins/ruby-build/bin:~/.rbenv/shims:~/.rbenv/bin:$PATH"
 
 bundle install --path vendor/bundle
 
