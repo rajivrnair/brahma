@@ -1,6 +1,8 @@
 #!/bin/bash
 ps ax | grep puma | grep 'tcp' | awk '{print $1}' | xargs -I % sh -c '{ kill -9 %; }'
 
+cd ~/brahma
+
 bundle install --path vendor/bundle
 
 mkdir -p tmp/puma
