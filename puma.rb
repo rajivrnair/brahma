@@ -6,3 +6,5 @@ state_path "#{root}/tmp/puma/state"
 rackup "#{root}/config.ru"
 
 threads 4, 8
+workers 2
+preload_app!
