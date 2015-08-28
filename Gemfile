@@ -1,11 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'dotenv'
 gem 'puma'
 gem 'sinatra'
 gem 'pry'
 gem 'activesupport'
 gem 'rspec'
 gem 'timecop'
-gem 'capistrano', '~> 3.1'
-gem 'capistrano-rbenv', '~> 2.0'
