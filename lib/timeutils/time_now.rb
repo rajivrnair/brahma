@@ -5,7 +5,8 @@ module Timeutils
 
     @@my_places = {
       'Bangalore' => 'Asia/Kolkata',
-      'Denver' => 'America/Denver'
+      'Denver' => 'America/Denver',
+      'Los Angeles' => 'America/Los_Angeles'
     }
 
     def self.in(zone='')

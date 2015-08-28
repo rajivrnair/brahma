@@ -22,7 +22,7 @@ module Timeutils
     end
 
     it 'calculates time in custom places' do
-      expect(Timeutils::TimeNow.in('Bangalore')).to eq('2015-08-15 12:00:00 +0530 (Bangalore)')
+      expect(Timeutils::TimeNow.in('Los Angeles')).to eq('2015-08-14 23:30:00 -0700 (Los Angeles)')
     end
 
     it 'calculates time in cities' do
