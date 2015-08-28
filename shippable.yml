@@ -10,4 +10,4 @@ script:
   bundle exec rspec
 
 after_success:
-  - bundle exec cap production deploy:execute_on_server --trace
+  - ssh-agent bash -c 'ssh-add /home/shippable/.ssh/id_rsa; ssh -i /home/shippable/.ssh/id_rsa -vT git@bitbucket.org; bundle exec cap production deploy:execute_on_server --trace'

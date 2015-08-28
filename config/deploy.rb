@@ -49,7 +49,7 @@ namespace :deploy do
 
   task :execute_on_server do
     # puts "Command map: #{SSHKit.config.command_map}"
-    on 'rnair@128.199.216.161' do
+    on 'deployer@128.199.216.161' do
       execute 'cd brahma && git pull && ./run_me.sh'
     end
   end
