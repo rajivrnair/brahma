@@ -13,6 +13,10 @@ module Timeutils
       Timecop.return
     end
 
+    it 'returns time in the default zone if none specified' do
+      expect(Timeutils::TimeNow.in(nil)).to eq('2015-08-15 12:00:00 +0530 (Bangalore). Enter a city/TimeZone to get time in that location.')
+    end
+
     it 'calculates time in a timezone' do
       expect(Timeutils::TimeNow.in('Europe/Rome')).to eq('2015-08-15 08:30:00 +0200 (Europe/Rome)')
     end
