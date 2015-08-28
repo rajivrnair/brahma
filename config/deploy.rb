@@ -35,7 +35,7 @@ set :linked_files, %w{.env}
 # set :keep_releases, 5
 
 # RBENV
-# set :rbenv_type, :user # or :system, depends on your rbenv setup
+set :rbenv_type, :user # or :system, depends on your rbenv setup
 # set :rbenv_ruby, '2.2.2'
 
 # in case you want to set ruby version from the file:
@@ -49,7 +49,7 @@ namespace :deploy do
 
   task :execute_on_server do
     # puts "Command map: #{SSHKit.config.command_map}"
-    on 'deployer@128.199.216.161' do
+    on primary(:app) do
       execute 'cd brahma && git pull && ./run_me.sh'
     end
   end
